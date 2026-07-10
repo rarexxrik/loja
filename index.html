@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="images/foto_logo.ico" type="image/x-icon">
+    <title>Vila Concept</title>
+</head>
+<body>
+    <header class="cabecalho">
+
+        <div class="container">
+
+            <button id="menu" class="container__bot"></button>
+
+            <label for="menu" class="container__boot">
+                <span class="container__menu container__imagem"></span>
+            </label>
+
+            <ul class="lista__menu" id="lista-categorias">
+                <li><button id="menu-saida" class="container__bot bot_reset"></button></li>
+
+                <li>
+                    <label for="menu-saida" class="container__boot">
+                        <span class="container__menu__saida container__imagem">&larr;</span>
+                    </label>
+                </li>
+
+                <li class="lista__titulo">CATEGORIAS</li>
+
+                <hr class="lista__divisoria">
+
+                <li class="lista__item">
+                    <button class="bot_reset" id="todos-os-produtos">
+                        <p class="lista__item-link">Todos os Produtos</p>
+                    </button>
+                </li>
+
+                <li class="lista__item">
+                    <button class="bot_reset" id="camisetas">
+                        <p class="lista__item-link">Camisetas</p>
+                    </button>
+                </li>
+
+                <li class="lista__item">
+                    <button class="bot_reset" id="calcas-e-bermudas">
+                        <p class="lista__item-link">Calças e Bermudas</p>
+                    </button>
+                </li>
+
+                <li class="lista__item">
+                    <button class="bot_reset" id="jaquetas-e-moletons">
+                        <p class="lista__item-link">Jaquetas e Moletons</p>
+                    </button>
+                </li>
+
+                <li class="lista__item">
+                    <button class="bot_reset" id="acessorios">
+                        <p class="lista__item-link">Acessórios</p>
+                    </button>
+                </li>
+            </ul>
+
+            <a href="index.html"><img src="images/foto_logo.png" alt="Logo Vila Concept" class="cabecalho__logo"></a>
+
+            <a class="cabecalho__contato" href="#"><img src="images/wpp.svg" alt="Icone Whatsapp Vendedor"></a>
+        </div>
+    </header>
+    <main>
+        <section class="busca" id="busca">
+            <span class="busca__titulo">Seja bem vindo a 
+                <h1><strong class="busca__titulo-destaque">Vila Concept.</strong></h1>
+            </span>
+
+            <h3 class="busca__texto">O que você busca?</h3>
+
+            <input id="campo-busca" type="search" class="busca__pesquisa" placeholder="*Camisetas*">
+
+        </section>
+
+        <section class="carrossel">
+
+            <h2 class="carrossel__titulo"> DESTAQUES</h2>
+
+            <hr class="divisoria">
+
+            <!-- Slider main container -->
+            <div class="swiper">
+                 <!-- Additional required wrapper -->
+                <div class="swiper-wrapper" id="carrossel">
+                    <!-- Slides -->
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div>
+        </section>
+
+        <section class="produtos">
+            <h2 class="produtos__titulo" id="titulo-page">PRODUTOS</h2>
+            <hr class="divisoria">
+            <div class="produtos_disponiveis" id="produtos-disponiveis">
+                <ul class="produtos__lista" id="produtos"></ul>
+            </div>
+            <div class="produtos_indisponiveis" id="produtos-indisponiveis">
+                <p class="nenhum_produto" id="aviso-sem-produto"><strong class="nenhum_texto">NENHUM PRODUTO <br> ENCONTRADO!</strong></p>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <div class="rodape__texto">
+            <h2 class="rodape__titulo">Vila Concept.</h2>
+            <h3 class="rodape__subtitulo">Desenvolvido por Henrique o próprio</h3>
+        </div>
+        <ul class="rodape__lista">
+            <li class="lista__item-rodape">
+                <a class="lista__item-link" href="#">
+                    <img class="lista__item-link-foto" src="images/wpp.svg" alt="Icone ancora para o vendedor no Whatsapp">
+                </a>
+            </li>
+
+            <li class="lista__item-rodape">
+                <a class="lista__item-link" href="#">
+                    <img class="lista__item-link-foto" src="images/instagram.svg" alt="Icone ancora a pagina no Instagram">
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            speed: 400,
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        }); 
+    </script> 
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/exibirProdutos.js"></script>
+    <script src="./scripts/filtrarProdutos.js"></script>
+    <script src="./scripts/verificarProdutoSelecionado.js"></script>
+</body>
+</html>

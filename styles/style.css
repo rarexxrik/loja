@@ -1,0 +1,462 @@
+@import url("reset.css");
+@import url("salepage.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+:root {
+    --cor-fundo: black;
+    --cor-titulo: #7a7a7a;
+    --cor-sobreposicao: #111111;
+    --cor-fonte: white;
+    --cor-valor-desconto: red;
+    --cor-wpp: #25D366;
+    --fonte-principal: "Montserrat", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-fonte);
+    font-family: var(--fonte-principal);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+main {
+    width: 95%;
+    margin: 0 auto;
+    flex: 1;
+}
+
+
+/* HEADER */
+
+.cabecalho {
+    display: flex;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container__boot {
+    padding-left: 0.5em;
+}
+
+.container__menu {
+    padding-left: 1em;
+    width: 1.9em;
+    height: 1.9em;
+    background-image: url(../images/menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.container__menu__saida {
+    position: absolute;
+    top: 0.20em;
+    right: 1.10em;
+
+    font-size: 2em;
+    font-weight: 700;
+    cursor: pointer;
+
+    width: 1.5em;
+    height: 1.5em;
+
+
+}
+
+.container__imagem {
+    padding-left: 1em;
+}
+
+.lista__menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 17.5em;
+    height: 100vh;
+    background-color: var(--cor-sobreposicao);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    margin: 0;
+    list-style: none;
+    z-index: 99999;
+}
+
+.lista__item {
+    padding: 1em 0;
+}
+
+.lista__titulo {
+    margin-top: 2em;
+    color: var(--cor-titulo);
+    font-weight: 700;
+    font-size: 1.13em;
+}
+
+.bot_reset {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.lista__item-link {
+    text-decoration: none;
+    color: var(--cor-fonte);
+    font-weight: 600;
+    font-size: 0.88em;
+}
+
+.lista__item-link:hover {
+    text-decoration: underline;
+}
+
+.container__bot {
+    display: none;
+}
+
+.cabecalho__logo{
+    width: 4em;
+    height: 4em;
+}
+
+.cabecalho__contato {
+    padding-right: 1em;
+}
+
+.cabecalho_reforco_seta {
+    font-size: 1.4em;
+}
+
+/* HEADER */
+
+/* CAMPO DE BUSCA */
+
+.busca {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3em;
+    background-image: url(../images/foto_produto.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1em 0em;
+    border-radius: 5px;
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+.busca__titulo {
+    font-weight: 500;
+    font-size: 2.19em;
+    text-align: center;
+}
+
+.busca__titulo-destaque {
+    font-weight: 700;
+}
+
+.busca__texto {
+    font-weight: 400;
+    font-size: 0.88em;
+    padding-bottom: 1em;
+}
+
+.busca__pesquisa {
+    background-color: transparent;
+    width: 80%;
+    padding: 0.7em 0.5em;
+    border: 2px solid var(--cor-titulo);
+    border-radius: 24px;
+    color: var(--cor-fonte);
+}
+
+.busca__pesquisa::placeholder {
+    background: url("../images/Pesquisa.svg") no-repeat;
+    background-position: left;
+    background-size: 1.25em;
+    text-align: center;
+    color: var(--cor-fonte);
+    font-weight: 500;
+    font-size: 1em;
+    font-family: var(--fonte-principal);
+}
+/* CAMPO DE BUSCA */
+
+/* CARROSSEL */
+
+.carrossel {
+    background-color: var(--cor-sobreposicao);
+    padding: 1em;
+    border-radius: 5px;
+    width: auto;
+}
+
+.carrossel__titulo {
+    text-align: center;
+    font-weight: 600;
+    color: var(--cor-titulo);
+}
+
+.divisoria {
+    width: 100%;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    display: none;
+}
+
+.swiper-foto {
+    width: 100%;
+}
+
+.swiper-link {
+    text-decoration: none;
+    color: var(--cor-fonte);
+}
+
+.produto__dados {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.produto__titulo {
+    font-size: 1.13em;
+    font-weight: 600;
+}
+
+.produto__valor {
+    color: var(--cor-valor-desconto);
+    font-weight: 300;
+    font-size: 0.82em;
+}
+
+/* CARROSSEL */
+
+/* PRODUTOS */
+
+.produtos__titulo {
+    font-weight: 600;
+    color: var(--cor-titulo);
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.produtos__lista {
+    margin-top: 1.5em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25em;
+}
+
+.produtos__foto {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.produtos__link {
+    text-decoration: none;
+    color: var(--cor-fonte);
+}
+
+.produtos_disponiveis {
+    display: block;
+}
+
+.produtos_indisponiveis {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nenhum_produto {
+    flex: 1;
+    min-height: 60vh;
+    padding: 0 10em 0 10em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nenhum_texto {
+    text-align: center;
+    font-weight: 900;
+    font-size: 3em;
+    color: var(--cor-titulo);
+}
+
+/* PRODUTOS */
+
+/* RODAPE */
+
+.rodape {
+    background-color: var(--cor-sobreposicao);
+    display: flex;
+    margin-top: 1.5em;
+    padding: 0.5em 0.3em;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    bottom: 0vh;
+}
+
+.rodape__titulo {
+    font-weight: 700;
+    font-size: 1.25em;
+    color: var(--cor-titulo);
+    margin-bottom: 0.3em;
+}
+
+.rodape__subtitulo {
+    font-weight: 300;
+    font-size: 0.75em;
+    color: var(--cor-titulo);
+}
+
+.rodape__lista {
+    padding-right: 0.3em;
+}
+
+.lista__item-rodape {
+    padding: 30% 0;
+}
+
+.lista__item-link-foto {
+    width: 1.25em;
+    height: 1.25em;
+}
+
+
+/* CATEGORIAS */
+
+.camisetas {
+    height: 78.4vh;
+}
+
+/* RESPONSIVO */
+
+/* TABLET */
+
+@media screen and (min-width: 1024px) {
+    .cabecalho__logo {
+        width: 8em;
+        height: 8em;
+    }
+    
+    .cabecalho__contato {
+        width: 2em;
+        height: 2em;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    .busca__titulo {
+        font-size: 3em;
+    }
+
+    .busca__texto {
+        font-size: 1.3em;
+    }
+
+    .busca__pesquisa::placeholder {
+        font-size: 1.5em;
+    }
+
+    .busca, .carrossel {
+        border-radius: 24px;
+    }
+
+    .swiper-foto {
+        width: 100%;
+    }
+
+    .produto__dados {
+        margin-top: 1em;
+    }
+
+    .produto__titulo {
+        font-size: 1.7em;
+    }
+
+    .produto__valor {
+        font-size: 1.25em;
+    }
+
+    .produto__desconto {
+        font-size: 1.5em;
+    }
+
+    .carrossel__titulo, .produtos__titulo {
+        font-size: 1.5em;
+    }
+}
+
+/* TABLET */
+
+/* PC */
+
+@media screen and (min-width: 1200px) {
+    main {
+        width: 75%;
+    }
+
+    .container__menu, .lista__titulo, .lista__divisoria, .container__menu__saida {
+        display: none;
+    }
+
+    .lista__menu {
+        display: flex;
+        background-color: var(--cor-fundo);
+        width: auto;
+        height: auto;
+        position: absolute;
+        z-index: auto;
+        top: auto;
+        padding: 0 5em;
+        gap: 1em;
+    }
+
+    .lista__item-link {
+        color: var(--cor-titulo);
+    }
+
+    .cabecalho__contato {
+        padding-right: 5em;
+    }
+
+    .produtos__foto {
+        width: 60%;
+    }
+
+    .rodape__lista {
+        display: flex;
+        gap: 1.5em;
+    }
+}
+
+/* PC */
+

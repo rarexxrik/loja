@@ -1,0 +1,114 @@
+
+[
+        {
+            "id": 1,
+            "nome": "Camiseta Real Madrid 2023/2024 vini JR",
+            "categoria": "camisetas",
+            "tamanho": "M",
+            "medidas": {
+                "largura": 14,
+                "altura": 40,
+                "manga": 20
+            },
+            "precoReal": 115,
+            "precoDesconto": 50,
+            "imagens": ["../images/produtos/IMG_1857_Original.webp", "../images/produtos/IMG_1866_Original.webp"],
+            "descricao": "Vendido! X",
+            "medidasImg": "images/medidascamiseta.png",
+            "destaque": true
+        },
+
+        {
+            "id": 2,
+            "nome": "Bermuda Billabong Branca Original",
+            "categoria": "calcas-e-bermudas",
+            "tamanho": "G",
+            "medidas": {
+                "cintura": 14,
+                "quadril": 40,
+                "comprimento": 80
+            },
+            "precoReal": 120,
+            "precoDesconto": 40,
+            "imagens": [
+                "../images/produtos/IMG_1885_Original.webp",
+                "../images/produtos/IMG_1886_Original.webp",
+                "../images/produtos/IMG_1887_Original.webp",
+                "../images/produtos/IMG_1890_Original.webp",
+                "../images/produtos/IMG_1891_Original.webp"
+            ],
+            "descricao": "X",
+            "medidasImg": "images/medidasbermuda.png",
+            "destaque": true
+        },
+
+        {
+           "id": 3,
+            "nome": "Bermuda Federal Art Vermelha",
+            "categoria": "calcas-e-bermudas",
+            "tamanho": "G",
+            "medidas": {
+                "cintura": 14,
+                "quadril": 40,
+                "comprimento": 80
+            },
+            "precoReal": 120,
+            "precoDesconto": 40,
+            "imagens": [
+                "../images/produtos/IMG_1892_Original.webp",
+                "../images/produtos/IMG_1894_Original.webp",
+                "../images/produtos/IMG_1895_Original.webp",
+                "../images/produtos/IMG_1896_Original.webp"
+            ],
+            "descricao": "X",
+            "medidasImg": "images/medidasbermuda.png",
+            "destaque": false
+        },
+
+        {
+             "id": 4,
+            "nome": "Bermuda Federal Art Original Verde",
+            "categoria": "calcas-e-bermudas",
+            "tamanho": "G",
+            "medidas": {
+                "cintura": 14,
+                "quadril": 40,
+                "comprimento": 80
+            },
+            "precoReal": 120,
+            "precoDesconto": 40,
+            "imagens": [
+                "../images/produtos/IMG_1897_Original.webp",
+                "../images/produtos/IMG_1898_Original.webp",
+                "../images/produtos/IMG_1899_Original.webp",
+                "../images/produtos/IMG_1900_Original.webp"
+            ],
+            "descricao": "X", 
+            "medidasImg": "images/medidasbermuda.png",
+            "destaque": true
+        },
+
+        {
+             "id": 5,
+            "nome": "Camiseta BornStrikers Destoned",
+            "categoria": "camisetas",
+            "tamanho": "G grande veste GG",
+            "medidas": {
+                "largura": 14,
+                "altura": 40,
+                "manga": 20
+            },
+            "precoReal": 90,
+            "precoDesconto": 45,
+            "imagens": [
+                "../images/produtos/IMG_1915_Original.webp",
+                "../images/produtos/IMG_1916_Original.webp",
+                "../images/produtos/IMG_1918_Original.webp",
+                "../images/produtos/IMG_1922_Original.webp",
+                "../images/produtos/IMG_1923_Original.webp"
+            ],
+            "descricao": "X",
+            "medidasImg": "images/medidascamiseta.png",
+            "destaque": true
+        }
+]

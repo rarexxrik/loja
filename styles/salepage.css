@@ -1,0 +1,260 @@
+/* CARROSSEL */
+
+.swiper {
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.swiper-foto-sale {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* INFORMACOES DE VENDA */
+
+.info__titulo {
+    text-align: center;
+    color: var(--cor-titulo);
+    font-weight: 700;
+    font-size: 1.57em;
+}
+
+.divisoria__sale {
+    width: 50%;
+    margin-bottom: 1.5em;
+}
+
+.tamanhos-disponiveis {
+    display: flex;
+    justify-content: center;
+}
+
+.info__tamanho {
+    border: 1px solid var(--cor-fonte);
+    padding: 0.5em 5em;
+    width: fit-content;
+    text-align: center;
+    border-radius: 24px;
+    color: var(--cor-titulo);
+    font-size: 0.63em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.32em;
+}
+
+.tamanho__medida {
+    color: var(--cor-fonte);
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.valor {
+    margin-top: 1.5em;
+}
+
+.valor__real {
+    color: var(--cor-valor-desconto);
+    font-size: 0.63em;
+    font-weight: 500;
+}
+
+.valor-desconto {
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+.info__opcoes {
+    margin-top: 0.5em;
+    color: var(--cor-titulo);
+    font-size: 0.63em;
+    font-weight: 500;
+    margin-bottom: 1.5em;
+}
+
+.abrir__bot {
+    display: none;
+}
+
+.opcoes__titulo {
+    color: var(--cor-titulo);
+    font-weight: 600;
+    font-size: 0.88em;
+}
+
+.opcoes__titulo:hover {
+    text-decoration: underline;
+}
+
+.bandeiras__foto {
+    width: 40%;
+    background-color: var(--cor-sobreposicao);
+    padding: 0.3em 1em ;
+    border-radius: 0.63em;
+    display: none;
+    text-align: end;
+}
+
+.abrir__bot:checked ~ .bandeiras__foto {
+    display: block;
+}
+
+.bot__pagamento {
+    display: flex;
+    justify-content: center;
+    margin-top: 7em;
+    text-align: center;
+}
+
+.info__link {
+    text-decoration: none;
+    color: var(--cor-fonte);
+    border: 1px solid;
+    padding: 0.3em 5em; 
+    border-radius: 24px;
+}
+
+.texto__principal {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.texto__secundario {
+    font-weight: 300;
+    font-size: 0.75em;
+}
+
+.info__link:hover {
+    background-image: url("../images/wpp.svg");
+    background-color: var(--cor-wpp);
+    background-repeat: no-repeat;
+    background-position: 95%
+}
+
+/* INFORMACOES DE VENDA */
+
+/* DESCRIÇÃO */
+
+.descricao {
+    margin-top: 5em;
+    text-align: justify;
+    width: 80%;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+}
+
+/* DESCRIÇÃO */
+
+/* TABELA DE MEDIDAS */
+
+.tabela-medidas {
+    display: grid;
+    grid-template-columns: 70% 30%;
+
+}
+
+.medidas__foto {
+    width: 100%;
+}
+
+.medidas {
+    margin-top: 1em;
+    list-style: disc;
+    font-size: 0.88em;
+    color: var(--cor-titulo);
+}
+
+/* RESPONSIVIDADE */
+
+/* TABLET */
+
+@media screen and (min-width: 1024px) {
+    .info__tamanho, .valor__real, .info__opcoes {
+        font-size: 1em;
+    }
+
+    .valor-desconto {
+        font-size: 3em;
+    }
+
+    .tabela-medidas {
+        justify-content: center;
+    }
+
+    .bot__pagamento {
+        margin-top: 1em;
+    }
+}
+
+/* TABLET */
+
+/* PC */
+
+@media screen and (min-width: 1200px) {
+    .venda {
+        margin-top: 10em;
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    .swiper-foto-sale {
+        width: 100%;
+        height: 100%;
+    }
+
+    .info__titulo {
+        font-size: 2.5em;
+    }
+
+    .tamanhos-disponiveis {
+        margin-top: 1em;
+    }
+
+    .info__tamanho {
+        border: 0px;
+    }
+
+    .divisoria__sale {
+        display: none;
+    }
+
+    .valor {
+        margin-top: 4em;
+    }
+
+    .valor, .opcoes__pagamento {
+        text-align: end;
+    }
+
+
+    .bot__pagamento {
+        margin-top: 8em;
+    }
+
+    .descricao {
+        margin-top: 10em;
+    }
+
+    .sale__tela-pc {
+        height: 100vh;
+    }
+
+    .info__link {
+        padding: 1em 10em;
+    }
+
+    .medidas__foto {
+    width: 50%;
+    
+    }
+    
+    .medidas {
+    font-size: 1.5em;
+    }
+}
+
+/* PC */
+
+/* RESPONSIVIDADE */

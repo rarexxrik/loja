@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="images/foto_logo.ico" type="image/x-icon">
+    <title>Nome do produto</title>
+</head>
+<body>
+    <header class="cabecalho">
+
+        <div class="container">
+
+            <button id="menu" class="container__bot"></button>
+
+            <label for="menu" class="container__boot">
+                <span class="container__menu container__imagem"></span>
+            </label>
+
+            <ul class="lista__menu" id="lista-categorias">
+                <li><button id="menu-saida" class="container__bot bot_reset"></button></li>
+
+                <li>
+                    <label for="menu-saida" class="container__boot">
+                        <span class="container__menu__saida container__imagem">&larr;</span>
+                    </label>
+                </li>
+
+                <li class="lista__item">
+                    <button class="bot_reset 2" id="voltar-produtos">
+                        <p class="lista__item-link"><strong class="cabecalho_reforco_seta">&larr;</strong> Voltar para produtos</p>
+                    </button>
+                </li>
+            </ul>
+
+            <a href="index.html"><img src="images/foto_logo.png" alt="Logo Vila Concept" class="cabecalho__logo"></a>
+
+            <a class="cabecalho__contato" href="#"><img src="images/wpp.svg" alt="Icone Whatsapp Vendedor"></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="sale__tela-pc">
+            <section class="venda">
+                <section class="carrossel-sale">
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                         <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper" id="carrossel-sale"><!-- Slides --></div>
+                    </div>
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </section>
+                <section class="venda__informacoes">
+                    <div class="infos_principais" id="venda-infos"></div>
+                        <div class="opcoes__pagamento">
+                            <input type="checkbox" id="abrir-imagem" class="abrir__bot">
+                            <label for="abrir-imagem">
+                                <span class="opcoes__titulo">
+                                    FORMAS DE PAGAMENTO &darr;
+                                </span>
+                            </label>
+                            <img class="bandeiras__foto" src="images/cartoes.png" alt="Logo de todas as bandeiras de cartoes mais usadas para pagamentos online">
+                        </div>
+                    <div class="bot__pagamento">
+                            <a href="#" target="_blank" rel="external" class="info__link">
+                                <span class="texto__principal">Finalizar Compra</span>
+                                <br>
+                                <span class="texto__secundario">Falar com o vendedor</span>
+                            </a>
+                    </div>
+                </section>
+            </section>
+            <section class="descricao">
+                <h2 class="descricao__titulo">Descrição</h2>
+                <p class="descricao__texto" id="descricao"></p>
+            </section>
+        </div>
+
+        <section class="tabela-medidas">
+            <div class="medidas_img" id="medidas-img"></div>
+
+            <ul class="medidas" id="medidas">
+                <li class="medidas-item">Largura: 70cm</li>
+
+                <li class="medidas-item">Altura: 90cm</li>
+
+                <li class="medidas-item">Manga: 20cm</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+            <div class="rodape__texto">
+                <h2 class="rodape__titulo">Vila Concept.</h2>
+                <h3 class="rodape__subtitulo">Desenvolvido por Henrique o próprio</h3>
+            </div>
+            <ul class="rodape__lista">
+                <li class="lista__item-rodape">
+                    <a class="lista__item-link" href="#">
+                        <img class="lista__item-link-foto" src="images/wpp.svg" alt="Icone ancora para o vendedor no Whatsapp">
+                    </a>
+                </li>
+                <li class="lista__item-rodape">
+                    <a class="lista__item-link" href="#">
+                        <img class="lista__item-link-foto" src="images/instagram.svg" alt="Icone ancora a pagina no Instagram">
+                    </a>
+                </li>
+            </ul>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            speed: 400,
+            spaceBetween: 10,
+            slidesPerView: 1,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        }); 
+    </script>
+
+    <script src="./scripts/requisicaoSalePage.js"></script>
+    <script src="./scripts/acoesSalePage.js"></script>
+    <script src="./scripts/exibirProdutosSale.js"></script>
+</body>
+</html>
