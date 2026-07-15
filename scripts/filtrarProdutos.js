@@ -6,6 +6,7 @@ botsCategorias.forEach(bot => bot.addEventListener('click', filtrarProdutos));
 function filtrarProdutos () {
     if (isMobile) {
         listaCategorias.style.display = "none";
+        main.style.filter = "none";
     }
 
     const botElemento = document.getElementById(this.id)

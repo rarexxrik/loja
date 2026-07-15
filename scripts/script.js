@@ -2,6 +2,7 @@ let listaProdutos = [];
 const botMenuEntrada = document.getElementById('menu');
 const listaCategorias = document.querySelector('.lista__menu')
 const botMenuSaida = document.getElementById('menu-saida')
+const main = document.querySelector('.main')
 
 getBuscarLivrosDaAPI()
 
@@ -15,8 +16,10 @@ async function getBuscarLivrosDaAPI () {
 
 botMenuEntrada.addEventListener('click', () => {
         listaCategorias.style.display = "block";
+        main.style.filter = "blur(8px)";
 })
 
 botMenuSaida.addEventListener('click', () => {
     listaCategorias.style.display = "none";
+    main.style.filter = "none";
 })
