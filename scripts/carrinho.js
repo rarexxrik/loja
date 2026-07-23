@@ -6,11 +6,13 @@ const botFecharCarrinho = document.querySelector('.cabecalho__carrinho-menu-bot-
 const botLimparCarrinho = document.getElementById('bot-limpar-carrinho');
 let carrinhoProdutos = JSON.parse(localStorage.getItem('carrinhoProdutos')) || []
 
-const navigation = performance.getEntriesByType("navigation")[0];
-
-if (navigation.type === "back_forward") {
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted) {
     exibirCarrinho('naoFoiClicado')
-}
+    carrinhoProdutos = JSON.parse(localStorage.getItem('carrinhoProdutos')) || []
+    elementoCarrinho.style.display = 'none'
+  }
+});
 
 botAbrirCarrinho.addEventListener('click', () => {
     exibirCarrinho();
