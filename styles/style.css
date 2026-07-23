@@ -4,6 +4,7 @@
 
 :root {
     --cor-fundo: black;
+    --cor-sobreposicao2: rgb(22, 22, 22);
     --cor-titulo: #7a7a7a;
     --cor-sobreposicao: #111111;
     --cor-fonte: white;
@@ -134,16 +135,204 @@ main {
 .cabecalho__logo{
     width: 4em;
     height: 4em;
-}
-
-.cabecalho__contato {
-    padding-right: 1em;
+    transform: translateY(0.1em);
 }
 
 .cabecalho_reforco_seta {
     font-size: 1.4em;
 }
 
+.cabecalho__carrinho-img {
+    transform: translateY(0.1em);
+    padding-right: 0.5em;
+}
+
+.cabecalho__carrinho-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 17.5em;
+    height: 100vh;
+    background-color: var(--cor-fundo);
+    padding: 0.5em 1em;
+    z-index: 99999;
+    gap: 1em;
+    flex-direction: column;
+}
+
+.lista-carrinho-avisos {
+    display: flex;
+    font-size: 0.3em;
+    justify-content: space-around;
+}
+
+.lista-carrinho-avisos2 {
+    display: flex;
+    bottom: 0;
+    font-size: 0.3em;
+    justify-content: space-around;
+}
+
+.cabecalho__carrinho-menu-bot-saida {
+    display: flex;
+}
+
+.cabecalho__carrinho-menu-saida {
+    color: var(--cor-titulo);
+    text-decoration: underline;
+}
+
+.carrinho-menu-bot-saida-texto {
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.carrinho-menu-lista {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 0.4em;
+    min-height: 0;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.item__lista-carinho {
+    margin-bottom: 0.5em;
+}
+
+.container-bot-x {
+    display: flex;
+    justify-content: right;
+}
+
+.bot-excluir-item-img {
+    width: 1.3em;
+    height: 1.3em;
+}
+
+.item__lista-carinho-dados {
+    display: flex;
+    gap: 0.5em;
+}
+
+.item__lista-carrinho-img {
+    width: 3.5em;
+    height: 3.5em;
+}
+
+.item__lista-carrinho-infos {
+    width: 100%;
+}
+
+.item__lista-carrinho-nome {
+    margin-bottom: 0.1em;
+}
+
+.item__lista-carrinho-tamanho {
+    font-size: 0.5em;
+    color: var(--cor-titulo);
+    margin-bottom: 0.5em;
+}
+
+.item__lista-carrinho-valor {
+    text-align: right;
+}
+
+.item__lista-carrinho-valor-real {
+    color: var(--cor-valor-desconto);
+    font-weight: 300;
+    font-size: 0.7em;
+}
+
+.item__lista-carrinho-valor-desconto {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.carrinho-menu-lista::-webkit-scrollbar {
+    width: 8px; /* largura da barra */
+}
+
+.carrinho-menu-lista::-webkit-scrollbar-track {
+    background: #111;
+    border-radius: 10px;
+}
+
+.carrinho-menu-lista::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 10px;
+}
+
+.carrinho-menu-lista::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+.carrinho-limpar-pdt-texto {
+    font-size: 0.4em;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.carrinho__valor-total {
+    display: flex;
+    justify-content: space-around;
+}
+
+.valor-total-qtd {
+    font-size: 0.5em;
+    color: var(--cor-titulo);
+}
+
+.carrinho__valor-total-valores {
+    text-align: right;
+}
+
+.valor-total-compra-real {
+    font-size: 0.7em;
+    font-weight: 300;
+    color: var(--cor-valor-desconto);
+}
+
+.valor-total-compra-desconto {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.bot__pagamento-carrinho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.info__link-carrinho {
+    text-decoration: none;
+    color: var(--cor-fonte);
+    border: 1px solid;
+    padding: 0.3em 4em; 
+    border-radius: 24px;
+}
+
+.texto__principal-carrinho {
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+.texto__secundario-carrinho {
+    font-weight: 300;
+    font-size: 0.5em;
+}
+
+.info__link-carrinho:hover {
+    background-image: url("../images/wpp.svg");
+    background-color: var(--cor-wpp);
+    background-repeat: no-repeat;
+    background-position: 95%
+}
 /* HEADER */
 
 /* CAMPO DE BUSCA */
@@ -444,8 +633,8 @@ main {
         color: var(--cor-titulo);
     }
 
-    .cabecalho__contato {
-        padding-right: 5em;
+    .cabecalho__carrinho-img {
+        padding-right: 2em;
     }
 
     .produtos__foto {

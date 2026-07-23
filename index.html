@@ -65,7 +65,47 @@
 
             <a href="index.html"><img src="images/foto_logo.png" alt="Logo Vila Concept" class="cabecalho__logo"></a>
 
-            <a class="cabecalho__contato" href="#"><img src="images/wpp.svg" alt="Icone Whatsapp Vendedor"></a>
+            <button class="cabecalho__carrinho bot_reset" id="bot-carrinho">
+                <img class="cabecalho__carrinho-img" src="images/icons8-carrinho-de-compras-24.png" alt="icone carrinho de compras">
+            </button>
+
+            <div class="cabecalho__carrinho-menu" id="carrinho-menu">
+                <p class="lista-carrinho-avisos">
+                    <strong>ENTREGAS FEITAS PARA TODO BRASIL</strong> 
+                    FINALIZAR PEDIDO VIA WHATSAPP
+                </p>
+
+                <button class="cabecalho__carrinho-menu-bot-saida bot_reset" id="bot-saida-carrinho">
+                    <span class="cabecalho__carrinho-menu-saida">
+                        <strong class="carrinho-menu-bot-saida-texto">FECHAR</strong> &rarr;
+                    </span>
+                </button>
+
+                <ul class="carrinho-menu-lista" id="lista-carrinho"></ul>
+
+                <button class="cabecalho__carrinho-menu-bot-limpar bot_reset" id="bot-limpar-carrinho">
+                    <span class="cabecalho__carrinho-limpar">
+                        &uarr;
+                        <br>
+                        <strong class="carrinho-limpar-pdt-texto">LIMPAR CARRINHO</strong>
+                    </span>
+                </button>
+
+                <div class="carrinho__valor-total" id="container-valor-total"></div>
+
+                <div class="bot__pagamento-carrinho">
+                    <a href="#" target="_blank" rel="external" class="info__link-carrinho">
+                        <span class="texto__principal-carrinho">Finalizar Compra</span>
+                        <br>
+                        <span class="texto__secundario-carrinho">Falar com o vendedor</span>
+                    </a>
+                </div>
+
+                <p class="lista-carrinho-avisos2">
+                    <strong>ENTREGAS FEITAS PARA TODO BRASIL</strong> 
+                    FINALIZAR PEDIDO VIA WHATSAPP
+                </p>
+            </div>
         </div>
     </header>
     <main class="main" id="main">
@@ -148,5 +188,6 @@
     <script src="./scripts/exibirProdutos.js"></script>
     <script src="./scripts/filtrarProdutos.js"></script>
     <script src="./scripts/verificarProdutoSelecionado.js"></script>
+    <script src="./scripts/carrinho.js"></script>
 </body>
 </html>

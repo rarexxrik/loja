@@ -1,4 +1,4 @@
-const idProduto = localStorage.getItem('produtoSelecionado');
+const idProduto = localStorage.getItem('idProdutoSelecionado');
 const textoJson = localStorage.getItem('listaProdutos');
 let listaProdutos = JSON.parse(textoJson)
 
@@ -17,6 +17,7 @@ function exibirProdutoSale() {
     exibirProdutoInfos(produtoSelecionado)
     exibirProdutoDescricao(produtoSelecionado)
     exibirProdutoMedidas(produtoSelecionado)
+
 }
 
 function exibirProdutoFotos(produto) {

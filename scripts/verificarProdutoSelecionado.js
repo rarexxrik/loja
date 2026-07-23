@@ -6,7 +6,7 @@ botsProdutos.addEventListener('click', (event) => {
 
     if (!botao) return
 
-    localStorage.setItem('produtoSelecionado', botao.id);
+    localStorage.setItem('idProdutoSelecionado', botao.id);
     window.location.href = './salepage.html'; 
 })
 
@@ -15,6 +15,6 @@ botsDestaques.addEventListener('click', (event) => {
 
     if (!botao) return
 
-    localStorage.setItem('produtoSelecionado', botao.id);
+    localStorage.setItem('idProdutoSelecionado', botao.id);
     window.location.href = './salepage.html'; 
 })

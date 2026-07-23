@@ -131,6 +131,27 @@
     background-position: 95%
 }
 
+.add-carrinho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.bot__add-carrinho-texto {
+    color: var(--cor-fonte);
+    border: 1px solid;
+    padding: 0.3em 3em; 
+    border-radius: 24px;
+}
+
+.bot__add-carrinho-texto:hover {
+    background-color: var(--cor-titulo);
+    background-image: url("../images/icons8-carrinho-de-compras-24.png");
+     background-repeat: no-repeat;
+    background-position: 95%
+}
+
 /* INFORMACOES DE VENDA */
 
 /* DESCRIÇÃO */
@@ -231,6 +252,10 @@
 
     .bot__pagamento {
         margin-top: 8em;
+    }
+
+    .add-carrinho {
+        margin-top: 1em;
     }
 
     .descricao {
