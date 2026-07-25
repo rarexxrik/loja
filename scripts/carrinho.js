@@ -12,6 +12,12 @@ const fotoCarrinhoVazio = "images/iconesacola.png";
 const fotoCarrinhoCheio = "images/iconesacolacheia.png";
 let carrinhoProdutos = JSON.parse(localStorage.getItem('carrinhoProdutos')) || []
 
+if (carrinhoProdutos.length > 0) {
+    elementoParaInserirIconeCarrinho.src = fotoCarrinhoCheio;
+} else {
+    elementoParaInserirIconeCarrinho.src = fotoCarrinhoVazio;
+}
+
 window.addEventListener('pageshow', (event) => {
   if (event.persisted) {
     exibirCarrinho('naoFoiClicado')
