@@ -7,17 +7,24 @@ const elementoParaInserirInfos = document.getElementById('venda-infos')
 const elementoParaInserirDescricao = document.getElementById('descricao')
 const elementoParaInserirImgMedidas = document.getElementById('medidas-img')
 const elementoParaInserirMedidas = document.getElementById('medidas')
+const tituloPage = document.getElementById('titulo-pag');
 
 exibirProdutoSale()
 
 function exibirProdutoSale() {
     const produtoSelecionado = listaProdutos[idProduto - 1]
     
-    exibirProdutoFotos(produtoSelecionado)
-    exibirProdutoInfos(produtoSelecionado)
-    exibirProdutoDescricao(produtoSelecionado)
-    exibirProdutoMedidas(produtoSelecionado)
+    exibirProdutoFotos(produtoSelecionado);
+    exibirProdutoInfos(produtoSelecionado);
+    exibirProdutoDescricao(produtoSelecionado);
+    exibirProdutoMedidas(produtoSelecionado);
+    exibirTituloPage(produtoSelecionado);
+};
 
+function exibirTituloPage (produto) {
+    tituloPage.innerHTML += `
+        ${produto.nome} - Vila Concept
+    `
 }
 
 function exibirProdutoFotos(produto) {

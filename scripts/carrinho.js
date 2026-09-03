@@ -23,6 +23,7 @@ window.addEventListener('pageshow', (event) => {
     exibirCarrinho('naoFoiClicado')
     carrinhoProdutos = JSON.parse(localStorage.getItem('carrinhoProdutos')) || []
     elementoCarrinho.style.display = 'none'
+    main.style.filter = "none";
   }
 });
 
@@ -32,9 +33,11 @@ botAbrirCarrinho.addEventListener('click', () => {
 
 botFecharCarrinho.addEventListener('click', () => {
     elementoCarrinho.style.display = 'none'
+    main.style.filter = "none"; 
 })
 
 function exibirCarrinho(naoFoiClicado) {
+    main.style.filter = "blur(8px)";
     let ProdutosASerAdicionados = JSON.parse(localStorage.getItem('carrinhoProdutos'))
     if (!naoFoiClicado) {
         elementoCarrinho.style.display = 'flex'
